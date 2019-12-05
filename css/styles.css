@@ -13,16 +13,14 @@ body {
 }
 
 .info,
-main
-    {
+main{
     width: 90%;
     margin:0 auto;
 }
 
 header,
 footer,
-h2,
-p {
+.info {
     text-align: center;
 }
 
@@ -34,20 +32,37 @@ header{
 
 .info {
     padding:2em 0;
-    border-bottom: 3px solid black;
-    margin-bottom: 0.5em;
+    border-bottom: 6px solid black;
+    margin-bottom: 0.3em;
+}
+
+legend {
+    border: 0;
+    box-shadow: none;
+    font-size: 2em;
+    padding-top: 1em;
 }
 
 h2 {
     padding-bottom: 1em;
 }
 
-fieldset > h2 {
+#zip {
+    width: 40%;
+    display: block;
+}
+
+fieldset > legend {
     text-align: left;
 }
 
 p {
     color: #aaa;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 footer{
@@ -62,9 +77,12 @@ footer{
 
 fieldset{
     border: none;
-    border-top: 1px solid black;
     padding: 1.5em 0;
     margin-bottom: 1em;
+}
+
+.top-border {
+    border-top: 1px solid black;
 }
 
 input[type="text"],
@@ -105,16 +123,12 @@ label {
 .newsletter-headlines {
     padding-top: 2em;
     margin: 0;
-}
-
-/* #zip {
-    width: auto;
-} */
+}   
 
 input:focus::placeholder,
 textarea:focus::placeholder{
     color:transparent;
-    text-align: left;
+    text-align: right;
 }
 
 input:focus,
@@ -151,16 +165,22 @@ textarea {
 
 @media (min-width:768px) {
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea {
-        width:auto;
+    .info,
+    main {
+        width: 60%;
+        min-width:750px;
     }
 
-    fieldset {
+    .form-element {
         display:flex;
-        flex-direction: row;
+        margin: 1em auto;
+    }
+
+    label {
+        flex-basis: 300px;
+    }
+
+    textarea {
+        height: 6em;
     }
 }
