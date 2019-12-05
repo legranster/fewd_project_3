@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Bitter", "Times New Roman", serif;
+}
+
+.info,
+main
+    {
+    width: 90%;
+    margin:0 auto;
+}
+
+header,
+footer,
+h2,
+p {
+    text-align: center;
+}
+
+header{
+    background-color: #16202c;
+    color: white;
+    padding: 2em 0;
+}
+
+.info {
+    padding:2em 0;
+    border-bottom: 3px solid black;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    padding-bottom: 1em;
+}
+
+fieldset > h2 {
+    text-align: left;
+}
+
+p {
+    color: #aaa;
+}
+
+footer{
+    padding: 2em 0;
+    font-style: italic;
+    background-color: #16202c;
+    color: white;
+}
+
+
+/* Form styles */
+
+fieldset{
+    border: none;
+    border-top: 1px solid black;
+    padding: 1.5em 0;
+    margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+button[type="submit"],
+select,
+textarea {
+    width: 100%;
+    font-family: "Bitter", "Times New Roman", serif;
+    font-size: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    background-color: rgb(233, 233, 233);
+    padding: 15px;
+}
+
+select {
+    height: 50px;
+    color: #aaa;
+    background-color: rgb(233, 233, 233);
+}
+
+label {
+    color: #aaa;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 1em 0 0.2em;
+}
+
+.newsletter-headlines {
+    padding-top: 2em;
+    margin: 0;
+}
+
+/* #zip {
+    width: auto;
+} */
+
+input:focus::placeholder,
+textarea:focus::placeholder{
+    color:transparent;
+    text-align: left;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline:none;
+    border: 2px solid #f26161;
+    transition: 0.5s;
+    font-style: normal;
+}
+
+button{
+    background-color: #fa7d7d;
+    height: 3em;
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+
+button:active {
+    background-color: #ff6565;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+
+textarea {
+    margin-top: 1em;
+}
+
+/* Media Queries */
+
+@media (min-width:768px) {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width:auto;
+    }
+
+    fieldset {
+        display:flex;
+        flex-direction: row;
+    }
+}
