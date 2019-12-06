@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
         <title>Sign Up | The Code Review</title>
     </head>
     <body>
@@ -32,7 +33,7 @@
                         </div>  
                         <div class="form-element">
                             <label for="address" >Street Address</label>
-                            <input type="text" name="address" id="address" placeholder="Tell us where you live, that's not creepy at all">
+                            <input type="text" name="address" id="address" placeholder="Tell us where you live">
                         </div>
                         <div class="form-element">
                             <label for="city">City</label>
@@ -103,15 +104,15 @@
                     </fieldset>
                 </div>
                 <div class="top-border">
-                    <fieldset>
+                    <fieldset class="newsletter">
                         <legend>Newsletter</legend>
                         <label class="newsletter-headlines">Select the newsletters you would like to receive</label><br>
                         <input type="checkbox" id="html-news" value="html-news" name="news"><label for="html-news">HTML News</label><br>
                         <input type="checkbox" id="css-news" value="css-news" name="news"><label for="css-news">CSS News</label><br>
                         <input type="checkbox" id="js-news" value="js-news" name="news"><label for="js-news">Javascript News</label><br>
                         <label class="newsletter-headlines">Newsletter format</label><br>
-                        <input type="radio" id="html-format" name="news-format" value="html-format"><label for="html-format">HTML Format</label><br>
-                        <input type="radio" id="plaintext-format" name="news-format" value="plaintext-format"><label for="plaintext-format">Plain text Format</label><br>
+                        <input type="radio" id="html-format" name="news-format" value="html-format"><label for="html-format">HTML</label><br>
+                        <input type="radio" id="plaintext-format" name="news-format" value="plaintext-format"><label for="plaintext-format">Plain text</label><br>
                         <label class="newsletter-headlines" for="other-topics">Other topics you'd like to hear about</label><br>
                         <textarea id="other-topics" name="other-topics" placeholder="Tell us about your dreams"></textarea>
                     </fieldset>

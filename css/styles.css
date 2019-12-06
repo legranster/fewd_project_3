@@ -6,10 +6,16 @@
     box-sizing: border-box;
 }
 
+/* Body Stylings */
+
 body {
     font-size: 16px;
     line-height: 1.5;
     font-family: "Bitter", "Times New Roman", serif;
+}
+
+h1 {
+    text-transform:uppercase;
 }
 
 .info,
@@ -25,8 +31,6 @@ footer,
 }
 
 header{
-    background-color: #16202c;
-    color: white;
     padding: 2em 0;
 }
 
@@ -56,20 +60,62 @@ fieldset > legend {
     text-align: left;
 }
 
-p {
-    color: #aaa;
-}
-
 a {
     text-decoration: none;
-    color: white;
 }
 
 footer{
     padding: 2em 0;
     font-style: italic;
-    background-color: #16202c;
+}
+
+.top-border {
+    border-top: 1px solid black;
+}
+
+/* Color stylings */
+
+p,
+select,
+label {
+    color: #aaa;
+}
+
+a,
+header,
+footer {
     color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    background-color: #e9e9e9;
+}
+
+header,
+footer {
+    background-color: #16202c;
+}
+
+button {
+    background-color: #fa7d7d;
+}
+
+button:active {
+    background-color: #ff6565;
+}
+
+.newsletter {
+    background-color: #797474;
+}
+
+.newsletter > legend,
+.newsletter > label {
+    color:white;
+    text-shadow: 1px 1px black;
 }
 
 
@@ -79,10 +125,6 @@ fieldset{
     border: none;
     padding: 1.5em 0;
     margin-bottom: 1em;
-}
-
-.top-border {
-    border-top: 1px solid black;
 }
 
 input[type="text"],
@@ -103,18 +145,14 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    background-color: rgb(233, 233, 233);
     padding: 15px;
 }
 
 select {
     height: 50px;
-    color: #aaa;
-    background-color: rgb(233, 233, 233);
 }
 
 label {
-    color: #aaa;
     display: inline-block;
     font-size: 1.2em;
     margin: 1em 0 0.2em;
@@ -128,12 +166,16 @@ label {
 input:focus::placeholder,
 textarea:focus::placeholder{
     color:transparent;
-    text-align: right;
 }
+
+input::placeholder {
+    text-align: right;
+  }
 
 input:focus,
 textarea:focus,
-select:focus {
+select:focus,
+button:focus {
     outline:none;
     border: 2px solid #f26161;
     transition: 0.5s;
@@ -141,24 +183,41 @@ select:focus {
 }
 
 button{
-    background-color: #fa7d7d;
     height: 3em;
     border-radius: 20px;
     margin-bottom: 1em;
 }
 
-button:active {
-    background-color: #ff6565;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
     display: inline-block;
-    margin: 0 1em 0 0;
+    margin: 0 1em 0 3em;
 }
 
 textarea {
     margin-top: 1em;
+    width: 82%;
+    height: 6em;
+}
+
+.newsletter {
+    border-radius:15px;
+    box-shadow: 0 0 15px black;
+}
+
+
+legend {
+    padding-top:3em;
+    font-weight: bold;
+}
+
+.newsletter > legend {
+    margin-left: 1em;
+}
+
+.newsletter-headlines,
+.newsletter > textarea {
+    margin-left: 2em;
 }
 
 /* Media Queries */
@@ -169,6 +228,7 @@ textarea {
     main {
         width: 60%;
         min-width:750px;
+        max-width: 1000px;
     }
 
     .form-element {
@@ -177,10 +237,10 @@ textarea {
     }
 
     label {
-        flex-basis: 300px;
+        min-width:20%;
     }
 
     textarea {
-        height: 6em;
+        width: 90%;
     }
 }
